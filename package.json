@@ -17,9 +17,5 @@
     "styled-components": "^5.3.3",
     "three": "^0.133.1",
     "vanta": "^0.5.21"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.0"
   }
 }

@@ -70,8 +70,8 @@ export default function Home() {
   return (
     <div className={styles.container} ref={vantaRef}>
       <Head>
-        <title>Allejo Superstars NFT</title>
-        <meta name="description" content="Your new best collection mania" />
+        <title>Casa Edificada 2024</title>
+        <meta name="description" content="Casa Edificada 2024" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
