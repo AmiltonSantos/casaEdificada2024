@@ -31,7 +31,7 @@
 
 .btn {
   width: 250px;
-  background: hwb(0 0% 0% / 0);
+  background: rgba(255, 0, 0, 0);
   height: 250px;
   border: none;
   border-radius: 50%;
