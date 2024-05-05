@@ -92,7 +92,7 @@ export default function Home() {
             );
           })}
         </motion.h6>
-        <Link href="https://twitter.com/Allejo_NFT">
+        <Link href="./">
           <motion.button
             className={styles.btn}
             animate={{
