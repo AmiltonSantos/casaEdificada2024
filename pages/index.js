@@ -111,6 +111,11 @@ export default function Home() {
             />
           </motion.button>
         </Link>
+        <div className={styles.CTA}>
+          <button className={styles.signup}>
+            Inscreva-se
+          </button>
+        </div>
       </main>
     </div>
   );

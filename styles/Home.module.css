@@ -52,3 +52,30 @@
     font-weight: 400;
   }
 }
+
+.signup {
+  width: 110px;
+  background-color: #fff;
+  color: #821f1f;
+  font-weight: 800;
+  font-size: 14px;
+  border: 1px #ce4444 solid;
+  border-radius: 2px;
+  padding: 5px 10px;
+  cursor: pointer
+}
+
+@media (max-width: 716px) {
+  .signup {
+    font-size: 18px;
+    width: 240px;
+    height: 35px;
+    padding: 6px 0;
+  }
+}
+
+.CTA {
+  display: flex;
+  gap: 5px;
+  padding-right: 15px;
+}
