@@ -2,6 +2,7 @@
 
 const Content = () => {
   return (
+    
     <div className="contentContainer">
       <img className="coverImage" src="/the-hunch-mobile.png" alt="" />
       <div className="dummyText">

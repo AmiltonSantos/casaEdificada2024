@@ -18,7 +18,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
     setIsOpen(!isOpen);
     if (isOpen === true) {
       //Link do grupo do whatsapp
-      document.location.href = 'https://chat.whatsapp.com/GsXG9wJeSrY5xHcDDEW8EK';
+      document.location.href = '';
     }
   }
 
@@ -39,7 +39,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
     </Container>
   }
 
-  const numeroPix = 'gerenciaferroeacoindiara@gmail.com';
+  const numeroPix = '';
 
   // set state to form data
   const [name, setName] = useState("");
@@ -92,7 +92,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
       // });
 
       /* Usando o -> https://sheet.best/api/sheets  */
-      const response = await fetch("https://sheet.best/api/sheets/ee05e664-7147-42c3-9553-1452c08caf63", {
+      const response = await fetch("https://sheet.best/api/sheets/8d1cc521-0e74-43ec-9ed9-76c44a2caa7b", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -162,12 +162,20 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
             </p>
             <hr />
             <form className="loginForm" onSubmit={handleSubmit}>
-              <label>Name</label> <br />
+              <label>Casal</label> <br />
               <input
                 type="text"
                 id="name"
                 value={name}
-                placeholder="Nome Completo"
+                placeholder="Homem..."
+                required
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="text"
+                id="name"
+                value={name}
+                placeholder="Mulher..."
                 required
                 onChange={(e) => setName(e.target.value)}
               />

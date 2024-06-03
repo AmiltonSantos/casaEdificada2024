@@ -17,11 +17,11 @@ const Pix = () => {
               <p>Cópiar pix...</p>
               <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroPix) }} />
             </div>
-            <h3> Pix E-mail: <span style={{color: 'red'}}></span></h3> 
-            <h3>Banco </h3>
+            <h3> ALESSANDRA RODRIGUES FREITAS ANDRADE <span style={{color: 'red'}}></span></h3> 
+            <h3>BCO  C6 S.A </h3>
             <br></br>
             <hr />
-            <img src="/taxaInscricao.png" className="pixTaxa" alt="" />
+            <img src="/taxaInscricao.jpg" className="pixTaxa" alt="" />
             
             <ToastContainer
               position="bottom-left"
