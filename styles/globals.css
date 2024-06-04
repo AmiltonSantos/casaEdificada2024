@@ -58,6 +58,7 @@ a {
 .modalContainer {
   margin: 0;
   text-align: center;
+  padding-top: 30px;
 }
 
 .input-wrapper {
@@ -69,7 +70,7 @@ a {
 .pixContainer {
   margin: 0;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
   background-color: white;
 }
 
@@ -162,7 +163,7 @@ a {
 }
 
 .taxa {
-  width: 330x;
+  width: 330px;
 }
 
 .pixTaxa {

@@ -39,7 +39,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
     </Container>
   }
 
-  const numeroPix = '';
+  const numeroPagamento = '00020101021126650014br.gov.bcb.pix0114+556299608300402251* - Lote Casa Edificada 5204000053039865406100.005802BR5925ALEXSANDRA RODRIGUES FREI6009SAO PAULO622905251HWT4R5A4ARYXTBWMHK9SW6A4630414C6';
 
   // set state to form data
   const [homem, setHomem] = useState("");
@@ -97,7 +97,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
         mode: 'cors',
         headers: {
           "Content-Type": "application/json",
-        },  
+        },
         body: JSON.stringify({
           id: "=ROW()-1",
           homem,
@@ -220,38 +220,43 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
           ariaHideApp={false}
         >
           <div className="modalContainer">
-            <br></br>
-            <img src="/taxaInscricao.jpg" className="taxa" alt="" />
-            <hr />
-
-            <br></br>
-            <h3></h3>
-
-            <br></br>
             <div className="divPix" onClick={toastSuccess}>
-              <h3> Pix Celular: (62) 99608-3004</h3>
-              <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroPix) }} />
-              <ToastContainer
-                position="bottom-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-              />
+              <p>Pix Copia e Cola: <b>(62) 99608-3004</b></p>
+              <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroPagamento) }} />
             </div>
-
             <br></br>
-            <h3>Banco</h3>
-
+            <textarea
+              id="name"
+              style={{
+                width: '95%',
+                height: '100px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                textAlign: 'center',
+                padding: '3px'
+              }}
+              defaultValue='00020101021126650014br.gov.bcb.pix0114+556299608300402251* - Lote Casa Edificada 5204000053039865406100.005802BR5925ALEXSANDRA RODRIGUES FREI6009SAO PAULO622905251HWT4R5A4ARYXTBWMHK9SW6A4630414C6'
+            />
             <br></br>
-            <button className="ctaButtonTaxa" onClick={toggleModal}>Entre no Grupo do WhatsApp</button>
+            <h4> ALESSANDRA RODRIGUES FREITAS ANDRADE <span style={{ color: 'red' }}></span></h4>
+            <h4>BCO  C6 S.A </h4>
+            <br></br>
+            <hr />
+            <img src="/taxaInscricao.jpg" className="pixTaxa" alt="" />
+
+            <ToastContainer
+              position="bottom-left"
+              autoClose={2500}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
           </div>
         </Modal>
-
       </div>
     </div>
   );
