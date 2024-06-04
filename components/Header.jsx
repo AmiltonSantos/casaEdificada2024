@@ -229,7 +229,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
 
             <br></br>
             <div className="divPix" onClick={toastSuccess}>
-              <h3> Pix E-mail: </h3>
+              <h3> Pix Celular: (62) 99608-3004</h3>
               <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroPix) }} />
               <ToastContainer
                 position="bottom-right"

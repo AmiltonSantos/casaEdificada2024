@@ -7,10 +7,10 @@ const Grupowhatsapp = () => {
 
   const toastSuccess = () => toast.info('Url cópiada com sucesso!');
 
-  const numeroPix = 'https://chat.whatsapp.com/GsXG9wJeSrY5xHcDDEW8EK';
+  const numeroGrupo = 'https://chat.whatsapp.com/I2zf1tiBoxmDednWb7rFi2';
 
   function toggleModal() {
-    document.location.href = 'https://chat.whatsapp.com/GsXG9wJeSrY5xHcDDEW8EK';
+    document.location.href = 'https://chat.whatsapp.com/I2zf1tiBoxmDednWb7rFi2';
   }
 
   return (
@@ -31,7 +31,7 @@ const Grupowhatsapp = () => {
       <br></br>
       
       <p className="newCustomer">
-        Cópie e cole no navegador...
+        Cópie e cole no navegador do seu celular...
       </p>
 
       <div className="input-wrapper" onClick={toastSuccess}>
@@ -45,9 +45,9 @@ const Grupowhatsapp = () => {
             borderRadius: '4px',
             textAlign: 'center'
           }} 
-          value='https://chat.whatsapp.com/GsXG9wJeSrY5xHcDDEW8EK'
+          value='https://chat.whatsapp.com/I2zf1tiBoxmDednWb7rFi2'
         />
-         <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroPix) }} />
+         <ContentCopyIcon className="corIconPix" onClick={() => { navigator.clipboard.writeText(numeroGrupo) }} />
       </div>
 
 
