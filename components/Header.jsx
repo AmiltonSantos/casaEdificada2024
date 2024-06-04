@@ -96,8 +96,8 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
         method: 'POST',
         mode: 'cors',
         headers: {
-          'Content-Type': 'application/json'
-        },
+          "Content-Type": "application/json",
+        },  
         body: JSON.stringify({
           id: "=ROW()-1",
           homem,
@@ -221,7 +221,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
         >
           <div className="modalContainer">
             <br></br>
-            <img src="/taxaInscricao.png" className="taxa" alt="" />
+            <img src="/taxaInscricao.jpg" className="taxa" alt="" />
             <hr />
 
             <br></br>
