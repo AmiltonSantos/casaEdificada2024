@@ -42,8 +42,8 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
   const numeroPix = '';
 
   // set state to form data
-  const [name, setName] = useState("");
-  const [idade, setIdade] = useState("");
+  const [homem, setHomem] = useState("");
+  const [mulher, setMulher] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [igreja, setIgreja] = useState("");
 
@@ -92,7 +92,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
       // });
 
       /* Usando o -> https://sheet.best/api/sheets  */
-      const response = await fetch("https://sheet.best/api/sheets/8d1cc521-0e74-43ec-9ed9-76c44a2caa7b", {
+      const response = await fetch("https://sheet.best/api/sheets/240f5049-3487-451b-97fb-809f1bdbb80d", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -100,8 +100,8 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
         },
         body: JSON.stringify({
           id: "=ROW()-1",
-          name,
-          idade,
+          homem,
+          mulher,
           whatsapp,
           igreja,
           datainscricao: (new Date().toLocaleString()).toString().replace(',', '')
@@ -129,8 +129,8 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
     }
 
     // clearing input data
-    setName("");
-    setIdade("");
+    setHomem("");
+    setMulher("");
     setWhatsapp("");
     setIgreja("");
 
@@ -165,19 +165,19 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
               <label>Casal</label> <br />
               <input
                 type="text"
-                id="name"
-                value={name}
+                id="homem"
+                value={homem}
                 placeholder="Homem..."
                 required
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setHomem(e.target.value)}
               />
               <input
                 type="text"
-                id="name"
-                value={name}
+                id="mulher"
+                value={mulher}
                 placeholder="Mulher..."
                 required
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setMulher(e.target.value)}
               />
               <label>Whatsapp</label> <br />
               <IMaskInput
