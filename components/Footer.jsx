@@ -1,18 +1,9 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Confetti from "react-confetti";
 
 const Footer = ({ openModal }) => {
   // useRouter hook to detect an active link and add styling
   const router = useRouter();
-
-  // set state for Confetti
-  const [isConfettiActive, setIsConfettiActive] = useState(false);
-
-  // function to envoke confetti when "join now" button is clicked
-  function handleClick() {
-    setIsConfettiActive(true);
-  }
 
   // if statement to apply classname to bottom CTA button based on the url
 
@@ -47,7 +38,6 @@ const Footer = ({ openModal }) => {
         <button
           className={className}
           onClick={() => {
-            handleClick();
             openModal();
           }}
         >
@@ -55,16 +45,6 @@ const Footer = ({ openModal }) => {
         </button>
         <h2>{data.heading}</h2>
         <p>amilton.dev</p>
-        {isConfettiActive && (
-          <Confetti
-            width={window.innerWidth}
-            height={window.innerHeight}
-            recycle={false}
-            numberOfPieces={500}
-            gravity={0.5}
-            onConfettiComplete={() => setIsConfettiActive(false)}
-          />
-        )}
       </div>
     </div>
   );

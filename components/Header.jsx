@@ -179,15 +179,6 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
                 required
                 onChange={(e) => setName(e.target.value)}
               />
-              <label>Idade</label> <br />
-              <input
-                type="number"
-                id="idade"
-                value={idade}
-                placeholder="0"
-                required
-                onChange={(e) => setIdade(e.target.value)}
-              />
               <label>Whatsapp</label> <br />
               <IMaskInput
                 mask="(00) 00000-0000"
