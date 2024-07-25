@@ -91,8 +91,10 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
       //   }),
       // });
 
-      /* Usando o -> https://sheet.best/api/sheets  */
-      const response = await fetch("https://sheet.best/api/sheets/240f5049-3487-451b-97fb-809f1bdbb80d", {
+      /* Usando o -> https://sheet.best/api/sheets  
+      https://sheet.best/api/sheets/240f5049-3487-451b-97fb-809f1bdbb80d
+      */
+      const response = await fetch("https://sheetdb.io/api/v1/6hwujluxee6pr", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -114,8 +116,8 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
 
       if (response.ok) {
 
-        // setSuccessMessage(`${data.created === 1 ? 'Cadastrado com sucesso' : 'Error ao cadastrar'}`); //usado no https://sheetdb.io
-        setSuccessMessage(data[0].name + ' Cadastrado com sucesso!'); //usado no https://sheet.best/api/sheets 
+        setSuccessMessage(`${data.created === 1 ? 'Cadastrado com sucesso' : 'Error ao cadastrar'}`); //usado no https://sheetdb.io
+        //setSuccessMessage(data[0].name + ' Cadastrado com sucesso!'); //usado no https://sheet.best/api/sheets 
         setregisterMessage(
           `Cadastrado com sucesso!`
         );
