@@ -94,7 +94,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
       /* Usando o -> https://sheet.best/api/sheets  
       https://sheet.best/api/sheets/240f5049-3487-451b-97fb-809f1bdbb80d
       */
-      const response = await fetch("https://sheetdb.io/api/v1/6hwujluxee6", {
+      const response = await fetch("https://sheetdb.io/api/v1/6hwujluxee6pr", { // https://sheetdb.io/api/v1/6hwujluxee6
         method: 'POST',
         mode: 'cors',
         headers: {
