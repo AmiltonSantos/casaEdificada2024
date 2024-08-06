@@ -94,6 +94,19 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
       /* Usando o -> https://sheet.best/api/sheets  
       https://sheet.best/api/sheets/240f5049-3487-451b-97fb-809f1bdbb80d
       */
+
+
+      // Obtém a data e hora atual
+      const dataAtual = new Date();
+
+      // Formata a data e hora no formato desejado
+      const dia = String(dataAtual.getDate()).padStart(2, '0'); // Preenche com zero à esquerda se necessário
+      const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Mês começa do zero
+      const ano = dataAtual.getFullYear();
+      const horas = String(dataAtual.getHours()).padStart(2, '0');
+      const minutos = String(dataAtual.getMinutes()).padStart(2, '0');
+      const segundos = String(dataAtual.getSeconds()).padStart(2, '0');
+
       const response = await fetch("https://sheetdb.io/api/v1/6hwujluxee6pr", { // https://sheetdb.io/api/v1/6hwujluxee6
         method: 'POST',
         mode: 'cors',
@@ -106,7 +119,7 @@ const Header = ({ openModal, closeModal, modalIsOpen }) => {
           mulher,
           whatsapp,
           igreja,
-          datainscricao: (new Date().toLocaleString()).toString().replace(',', '')
+          datainscricao: `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`
         }),
       });
 
