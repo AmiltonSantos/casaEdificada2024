@@ -4,7 +4,7 @@ const Content = () => {
   return (
     <div className="static">
       <video
-        src="/casaedificada.mp4"
+        src="/casaedificada2.mp4"
         autoPlay
         loop
         muted
